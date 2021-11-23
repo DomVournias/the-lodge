@@ -22,6 +22,7 @@ const theme = {
     high: "#F57B68",
     skin: "#F9C9A9",
     grey: "#99AAB5",
+    lighter: "#626772",
     chat: "#36393F",
     channels: "#2F3136",
     servers: "#202225",
@@ -49,6 +50,6 @@ function App() {
 export default App;
 
 const AppBody = styled.div`
-display: flex;
-height: 100vh;
+  display: flex;
+  height: 100vh;
 `;
