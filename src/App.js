@@ -9,6 +9,7 @@ import Chat from "./components/Chat";
 import { useAuthState } from "react-firebase-hooks/auth/";
 import { auth } from "./firebase";
 import Login from "./components/Login";
+import lodgeLogo from "./assets/images/lodgeLogo";
 
 const theme = {
   colors: {
@@ -36,6 +37,16 @@ const theme = {
 
 function App() {
   const [user, loading] = useAuthState(auth);
+
+  if (loading) {
+    return (
+      <AppLoading>
+        <AppLoadingContent>
+          <img src={lodgeLogo} />
+        </AppLoadingContent>
+      </AppLoading>
+    );
+  }
 
   return (
     <>
@@ -66,3 +77,7 @@ const AppBody = styled.div`
   display: flex;
   height: 100vh;
 `;
+
+const AppLoading = styled.div``;
+
+const AppLoadingContent = styled.div``;

@@ -1,15 +1,17 @@
 import { Button } from "@material-ui/core";
 import React, { useState, useRef } from "react";
-import { db } from "../firebase";
+import { auth, db } from "../firebase";
 import styled from "styled-components";
 import AddCircleRoundedIcon from "@material-ui/icons/AddCircleRounded";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 function ChatInput({ channelName, channelId, chatRef }) {
   // const inputRef = useRef(null);
   const [input, setInput] = useState("");
+  const [user] = useAuthState(auth);
   const sendMessage = (e) => {
     e.preventDefault(); //Prevents refreshing
 
@@ -21,9 +23,8 @@ function ChatInput({ channelName, channelId, chatRef }) {
       message: input,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       //Getting the chat text from the input
-      user: "Dom Vournias",
-      userImage:
-        "https://hubstaff-talent.s3.amazonaws.com/avatars/8d8d345335bd554c2b1e9cd58abd6eae",
+      user: user.displayName,
+      userImage: user.photoURL,
     });
 
     chatRef.current.scrollIntoView({
