@@ -3,10 +3,12 @@ import { Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./styles/Global";
-import Home from "./components/Home";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Chat from "./components/Chat";
+import { useAuthState } from "react-firebase-hooks/auth/";
+import { auth } from "./firebase";
+import Login from "./components/Login";
 
 const theme = {
   colors: {
@@ -21,8 +23,10 @@ const theme = {
     brilliance: "#44DDBF",
     high: "#F57B68",
     skin: "#F9C9A9",
+    normal: "#dcddde",
     grey: "#99AAB5",
     lighter: "#626772",
+    chatbox: "#40444b",
     chat: "#36393F",
     channels: "#2F3136",
     servers: "#202225",
@@ -31,16 +35,25 @@ const theme = {
 };
 
 function App() {
+  const [user, loading] = useAuthState(auth);
+
   return (
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <Header />
+
         <AppBody>
-          <Sidebar />
-          <Routes>
-            <Route path="/" element={<Chat />} exact></Route>
-          </Routes>
+          {!user ? (
+            <Login />
+          ) : (
+            <>
+              <Header />
+              <Sidebar />
+              <Routes>
+                <Route path="/" element={<Chat />} exact></Route>
+              </Routes>
+            </>
+          )}
         </AppBody>
       </ThemeProvider>
     </>
