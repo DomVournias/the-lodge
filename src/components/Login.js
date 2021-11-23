@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Button } from "@material-ui/core";
 import { auth, provider } from "../firebase";
-
-const logo = "../images/lodgeLogo.png";
+import logoUrl from "../images/lodgeLogo.png";
 
 function Login() {
   const signIn = (e) => {
@@ -15,7 +14,7 @@ function Login() {
       <InnerLoginContainer>
         <LogoContainer>
           <h3>Sign in to the</h3>
-          <img src={logo}></img>
+          <img src={logoUrl}></img>
           <p>Made for great pirates.</p>
         </LogoContainer>
         <Button onClick={signIn}>Sign in with Google</Button>
@@ -72,8 +71,7 @@ const LogoContainer = styled.div`
     color: white;
   }
   > img {
-    width: 30%;
-    size: 20px;
+    width: 40%;
   }
   > p {
     color: ${({ theme }) => theme.colors.lighter};
