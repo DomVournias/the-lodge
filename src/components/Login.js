@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../assets/images/lodgeLogo.png";
 import { Button } from "@material-ui/core";
 import { auth, provider } from "../firebase";
+
+const logo = "../images/lodgeLogo.png";
 
 function Login() {
   const signIn = (e) => {

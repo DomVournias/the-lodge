@@ -9,7 +9,8 @@ import Chat from "./components/Chat";
 import { useAuthState } from "react-firebase-hooks/auth/";
 import { auth } from "./firebase";
 import Login from "./components/Login";
-import lodgeLogo from "./assets/images/lodgeLogo";
+import Spinner from "react-spinkit";
+import logoUrl from "./images/lodgeLogo.png";
 
 const theme = {
   colors: {
@@ -40,11 +41,19 @@ function App() {
 
   if (loading) {
     return (
-      <AppLoading>
-        <AppLoadingContent>
-          <img src={lodgeLogo} />
-        </AppLoadingContent>
-      </AppLoading>
+      <>
+        <GlobalStyles />
+        <AppLoading>
+          <AppLoadingContent>
+            <img src={logoUrl} />
+            <Spinner
+              name="ball-spin-fade-loader"
+              color="#9B84EE"
+              fadeIn="none"
+            />
+          </AppLoadingContent>
+        </AppLoading>
+      </>
     );
   }
 
@@ -76,8 +85,28 @@ export default App;
 const AppBody = styled.div`
   display: flex;
   height: 100vh;
+  background-color: ${theme.colors.black};
 `;
 
-const AppLoading = styled.div``;
+const AppLoading = styled.div`
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: ${theme.colors.black};
+`;
 
-const AppLoadingContent = styled.div``;
+const AppLoadingContent = styled.div`
+  text-align: center;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  align-items: center;
+
+  > img {
+    width: 30%;
+    margin-bottom: 50px;
+  }
+`;
