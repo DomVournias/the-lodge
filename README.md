@@ -1,8 +1,6 @@
 ## The Lodge
 
-This is a personal project. A web application like Slack or Discord. I built it to improve my coding. You can check the
-
-`<a href="https://the-lodge-2bace.web.app/">demo here</a>`
+This is a personal project. A web application like Slack or Discord. I built it to improve my coding. You can check the `demo` <a href="https://the-lodge-2bace.web.app/">here</a>.
 
 <div align="center">
 <img width="100%" height = "100%" src="https://i.ibb.co/N1LdvxZ/Screenshot-1.jpg" alt="cover" />
