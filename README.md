@@ -2,11 +2,11 @@
 
 This is a personal project. A web application like Slack or Discord. I built it to improve my coding.
 
-You can check the `demo` <a href="https://the-lodge-2bace.web.app/">here</a>.
-
 <div align="center">
 <img width="100%" height = "100%" src="https://i.ibb.co/N1LdvxZ/Screenshot-1.jpg" alt="cover" />
 </div>
+
+You can check the `demo` <a href="https://the-lodge-2bace.web.app/">here</a>.
 
 <h2> Stacks Used <img src = "https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width = 32px> </h2>
 <a href= https://github.com/?tab=repositories&q=&type=&language=reactjs&sort= > <img width ='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/reactjs.svg'> </a>
