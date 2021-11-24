@@ -11,30 +11,7 @@ import { auth } from "./firebase";
 import Login from "./components/Login";
 import Spinner from "react-spinkit";
 import logoUrl from "./images/lodgeLogo.png";
-
-const theme = {
-  colors: {
-    white: "#FFFFFF",
-    lodge: "#7289DA",
-    online: "#43B581",
-    danger: "#F04747",
-    idle: "#fAA61A",
-    nitro: "#FF73FA",
-    bravery: "#9B84EE",
-    balance: "#44DDBF",
-    brilliance: "#44DDBF",
-    high: "#F57B68",
-    skin: "#F9C9A9",
-    normal: "#dcddde",
-    grey: "#99AAB5",
-    lighter: "#626772",
-    chatbox: "#40444b",
-    chat: "#36393F",
-    channels: "#2F3136",
-    servers: "#202225",
-    black: "#16181a",
-  },
-};
+import { theme } from "./styles/Theme";
 
 function App() {
   const [user, loading] = useAuthState(auth);

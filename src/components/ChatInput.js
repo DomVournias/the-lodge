@@ -7,6 +7,10 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
+import {
+  ChatInputContainer,
+  ChatInputContainerInner,
+} from "../styles/ChatInput.styled";
 
 function ChatInput({ channelName, channelId, chatRef }) {
   // const inputRef = useRef(null);
@@ -54,42 +58,3 @@ function ChatInput({ channelName, channelId, chatRef }) {
 }
 
 export default ChatInput;
-
-const ChatInputContainer = styled.div``;
-
-const ChatInputContainerInner = styled.div`
-  position: relative;
-  justify-content: center;
-  display: flex;
-
-  > form {
-    position: fixed;
-    bottom: 0px;
-    width: 83%;
-    background-color: transparent;
-    color: white;
-    font-size: 14px;
-    font-weight: 500;
-    outline: none;
-    border: none;
-    background-color: ${({ theme }) => theme.colors.chat};
-  }
-
-  > form > input {
-    border-radius: 8px;
-    width: 100%;
-    margin-bottom: 30px;
-    padding: 15px 25px;
-    background-color: transparent;
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    outline: none;
-    border: none;
-    background-color: ${({ theme }) => theme.colors.chatbox};
-  }
-
-  > form > button {
-    display: none;
-  }
-`;
