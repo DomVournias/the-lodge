@@ -1,10 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
-
 ## The Lodge
 
-This is a personal project. A web application like Slack or Discord. I built it to improve my coding. You can check the [demo here][https://the-lodge-2bace.web.app/].
+This is a personal project. A web application like Slack or Discord. I built it to improve my coding. You can check the
 
-### `yarn start`
+`<a href="https://the-lodge-2bace.web.app/">demo here</a>`
 
 <div align="center">
 <img width="100%" height = "100%" src="https://i.ibb.co/N1LdvxZ/Screenshot-1.jpg" alt="cover" />
