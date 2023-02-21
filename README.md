@@ -1,6 +1,6 @@
 ## The Lodge
 
-This is a personal project. A web application like Slack or Discord. I built it to improve my coding.
+This is a personal project currently in progress, where you can send private or public messages to your friends. 
 
 <div align="center">
 <img width="100%" height = "100%" src="https://i.ibb.co/N1LdvxZ/Screenshot-1.jpg" alt="cover" />
